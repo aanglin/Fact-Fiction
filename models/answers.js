@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-//News Headlines table info
+//score table
 
-FakeNews.init(
+Answers.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,23 +11,27 @@ FakeNews.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
-      type: DataTypes.STRING,
+    userName: {
+      type: DateTypes.STRING,
       allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
-    label: {
-      type: DataType.BOOLEAN,
-      allowNull: false,
-      unique: false
+      score: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
     },
-  },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'fakeNews',
+    modelName: 'answers',
   }
 );
 
-module.exports = FakeNews;
+module.exports = Answers;
+
