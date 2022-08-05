@@ -1,42 +1,55 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
+<link rel="stylesheet" type="text/css" href="./Project-2/public/CSS/style.css">
 
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
+<section id="section-one">
+  <div class="login-modal">
+    <div class="close-btn">
+      <a href="#">&times;</a>
+    </div>
+    <h1>Login</h1>
+    <form method="POST" action="/api/user/login">
+      <input type="text" name="email" placeholder="Your email" required>
+      <input type="password" name="password" placeholder="Your password" required>
     </form>
+    <a href="#" class="forgot-password">Forgot password ?</a>
+    <input type="submit" name="login" value="Login">
+    
+    
+    
+    <span class="login-modal-text">or Login in with</span>
+    
+    <div class="login-with">
+      
+      <button type="button" class="login-with-btn"><i class="fa fa-google"></i></button>
+      
+      <div class="login-modal-footer">
+        <span>Not a member ? <a href="#">Sign up</a></span>
+      </div>
+    </div>
+    
+    
   </div>
-  <div class="col-md-6">
-    <h2>Signup</h2>
+</section>
 
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
+<section id="section-two">
+  <div class="login-modal">
+    <div class="close-btn">
+      <a href="#">&times;</a>
+    </div>
+    <h1>Sing up</h1>
+    <form action="" method="POST">
+      <!-- First Name -->
+      <input type="text" name="first_name" class="username-input" placeholder="Firstname" required>
+      <!-- Last Name -->
+      <input type="text" name="last_name" class="lastname-input" placeholder="Lastname" required>
+      <!-- Email -->
+      <input type="email" name="email" class="email-input" placeholder="Email" required>
+      <!-- Password -->
+      <input type="password" name="password" class="password-input" placeholder="Password" required>
+      <!-- Confirm Password -->
+      <input type="password" name="password2" class="password-input" placeholder="Confirm password" required>
     </form>
+    <a href="#" class="sign-up">Sing up</a>
+    <input type="checkbox" name="checkbox" value="check" id="agree" !> 
+    <p classs = "Terms">I have read and agree to the Terms and Conditions and Privacy Policy</p>
   </div>
-</div>
-
-<script src="./js/login.js"></script>
+</section>
