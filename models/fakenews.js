@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 //News Headlines table info
-
+class FakeNews extends Model {}
 FakeNews.init(
   {
     id: {
@@ -16,7 +16,7 @@ FakeNews.init(
       allowNull: false,
     },
     label: {
-      type: DataType.BOOLEAN,
+      type: DataTypes.BOOLEAN,
       allowNull: false,
       unique: false
     },

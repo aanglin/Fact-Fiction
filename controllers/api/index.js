@@ -1,6 +1,17 @@
 const router = require('express').Router();
-const lawRoutes = ('./lawRoutes'); 
+const lawRoutes = require('./lawRoutes'); 
 
-router.use('./laws', lawRoutes);
+router.use('/law', lawRoutes);
 
-module.export = router;
+module.exports = router;
+
+
+
+
+// const router = require('express').Router();
+
+// const dishRoutes = require('./dish-routes.js');
+
+// router.use('/dish', dishRoutes);
+
+// module.exports = router;
