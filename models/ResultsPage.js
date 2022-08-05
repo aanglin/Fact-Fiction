@@ -2,8 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 //score table
+class ResultsPage extends Model{}
 
-Answers.init(
+ResultsPage.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,7 +13,7 @@ Answers.init(
       autoIncrement: true,
     },
     userName: {
-      type: DateTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: 'user',
@@ -29,9 +30,9 @@ Answers.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'answers',
+    modelName: 'resultsPage',
   }
 );
 
-module.exports = Answers;
+module.exports = ResultsPage;
 
