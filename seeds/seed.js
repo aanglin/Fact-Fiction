@@ -1,24 +1,17 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const { Laws, fakenews, userData } = require('./models');
 
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const lawsSeedData = require('./laws.json');
+const fakeNewsSeedData = require('./fakenews.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  const laws = await Laws.bulkCreate(lawsSeedData);
+  const fakeNews = await fakenews.bulkCreate(fakeNewsSeedData);
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
-
+  console.log(laws, fakeNews);
   process.exit(0);
 };
 
