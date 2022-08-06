@@ -1,6 +1,6 @@
 const router = require('express').Router();
 // Time for the game
-var timeLeft = 61;
+var timeLeft = 4;
 var title;
 var label;
 // Time element on HTML page
@@ -32,11 +32,17 @@ function getRandomFact() {
   fetch(randomFactApi)
     .then (function(response){
       return response.json();
-    }).then(function (cat){
+    }).then(function (data){
+      // console.log(data)
+      var i = data[Math.floor(Math.random()* data.length)]
+      //
+      console.log(i.title, i.label);
+    
       // Defining data 
-      title = cat[1].title
+      // title = data[i].title
+      // label = data[i].label
+      // console.log(title)
 
-      console.log(title)
     })
 
 }
