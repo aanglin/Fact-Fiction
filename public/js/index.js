@@ -14,13 +14,19 @@ function startGame() {
       }
       console.log(timeLeft);
     }, 1000);
+    getRandomFact();
 }
+
+//tie to event listener - button click
 startGame()
+
+
+
 //function to randomly select laws or headlines from DB to display to user, include timer
 
-// function getRandomFact() {
+function getRandomFact() {
 
-// }
+}
 
 
 // function to check user choice against boolean (label column). include if statement saying, if user choice equals label then add point to ResultsPage table. 
