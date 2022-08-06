@@ -2,8 +2,8 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 //News Headlines table info
-
-FakeNews.init(
+class RandomFacts extends Model {}
+RandomFacts.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -16,7 +16,7 @@ FakeNews.init(
       allowNull: false,
     },
     label: {
-      type: DataType.BOOLEAN,
+      type: DataTypes.BOOLEAN,
       allowNull: false,
       unique: false
     },
@@ -26,8 +26,8 @@ FakeNews.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'fakeNews',
+    modelName: 'randomFacts',
   }
 );
 
-module.exports = FakeNews;
+module.exports = RandomFacts;

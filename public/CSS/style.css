@@ -1,0 +1,264 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #2196f3;
+}
+
+input, button{
+  border: none;
+}
+
+button{
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+button:hover{
+  transform: scale(1.2);
+}
+
+*:focus{
+  outline: none;
+}
+
+/* Section one */
+#section-one{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#section-one .login-modal{
+  background-color: #F2F2F2;
+  width: 450px;
+  height: 620px;
+  margin: 60px 30px;
+  -webkit-box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.75);
+}
+
+#section-one .login-modal .close-btn a{
+  position: relative;
+  font-size: 1.5em;
+  color: #444;
+  display: none;
+}
+
+#section-one .login-modal h1{
+  text-align:center;
+  position: relative;
+  top: 30px;
+  padding-bottom: 70px;
+  color: #777;
+  font-family: Arial;
+  font-size: 1.6em;
+}
+
+#section-one .login-modal input{
+  display: block;
+  margin: 20px auto;
+  font-size: .85em;
+}
+
+#section-one .login-modal input[type="text"]{
+  border-bottom: 2px solid #ddd;
+  width: 80%;
+  padding: 15px 8px;
+  transition: ease-in-out .4s;
+}
+
+#section-one .login-modal input[type="password"]{
+  border-bottom: 2px solid #ddd;
+  width: 80%;
+  padding: 15px 8px;
+  transition: ease-in-out .4s;
+}
+
+#section-one .login-modal a{
+  text-decoration: none;
+  float: right;
+  right: 40px;
+  position: relative;
+  font-size: 0.80em;
+  color: #0A92BF;
+}
+
+#section-one .login-modal input[type="submit"]{
+  margin-top: 80px;
+  width: 80%;
+  padding: 15px 0;
+  border-radius: 30px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  opacity: 0.9;
+  transition: ease-in-out .2s;
+  cursor: pointer;
+  letter-spacing: 1px;
+  background: rgba(59,103,165,1);
+  background: -moz-linear-gradient(45deg, rgba(59,103,165,1) 0%, rgba(56,105,168,1) 5%, rgba(21,117,208,1) 29%, rgba(6,122,224,1) 39%, rgba(6,133,224,1) 62%, rgba(21,166,249,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,103,165,1)), color-stop(5%, rgba(56,105,168,1)), color-stop(29%, rgba(21,117,208,1)), color-stop(39%, rgba(6,122,224,1)), color-stop(62%, rgba(6,133,224,1)), color-stop(100%, rgba(21,166,249,1)));
+  background: -webkit-linear-gradient(45deg, rgba(59,103,165,1) 0%, rgba(56,105,168,1) 5%, rgba(21,117,208,1) 29%, rgba(6,122,224,1) 39%, rgba(6,133,224,1) 62%, rgba(21,166,249,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(59,103,165,1) 0%, rgba(56,105,168,1) 5%, rgba(21,117,208,1) 29%, rgba(6,122,224,1) 39%, rgba(6,133,224,1) 62%, rgba(21,166,249,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(59,103,165,1) 0%, rgba(56,105,168,1) 5%, rgba(21,117,208,1) 29%, rgba(6,122,224,1) 39%, rgba(6,133,224,1) 62%, rgba(21,166,249,1) 100%);
+  background: linear-gradient(45deg, rgba(59,103,165,1) 0%, rgba(56,105,168,1) 5%, rgba(21,117,208,1) 29%, rgba(6,122,224,1) 39%, rgba(6,133,224,1) 62%, rgba(21,166,249,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b67a5', endColorstr='#15a6f9', GradientType=1 );
+}
+
+#section-one .login-modal input[type="submit"]:hover{
+  opacity: 1;
+}
+
+#section-one .login-modal .login-modal-text{
+  position: relative;
+  left: 165px;
+  top: 20px;
+  color: #888;
+  font-size: 0.85em;
+  letter-spacing: 0.80px;
+}
+
+#section-one .login-modal .login-with button{
+  position: relative;
+  top: 50px;
+  left: 175px;
+  padding: 15px 30px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+  border: 1px solid #ddd;
+}
+
+#section-one .login-modal .login-with i{
+  color: #2196f3;
+}
+
+#section-one .login-modal .login-modal-footer span{
+  position: relative;
+  top: 110px;
+  left: 155px;
+  font-size: 0.80em;
+}
+
+#section-one .login-modal .login-modal-footer a{
+  position: relative;
+  top: 112px;
+  right: 155px;
+  font-size: 1em;
+}
+
+
+/* Section two */
+#section-two{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#section-two .login-modal{
+  background-color: #F2F2F2;
+  width: 450px;
+  height: 700px;
+  margin: 60px 30px;
+  -webkit-box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.75);
+}
+
+#section-two .login-modal .close-btn a{
+  position: relative;
+  font-size: 1.5em;
+  color: #444;
+  display: none;
+}
+
+#section-two .login-modal h1{
+  text-align:center;
+  position: relative;
+  top: 30px;
+  padding-bottom: 70px;
+  color: #777;
+  font-family: Arial;
+  font-size: 1.6em;
+}
+
+#section-two .login-modal input{
+  display: block;
+  margin: 20px auto;
+  font-size: .85em;
+}
+
+#section-two .login-modal input[type="text"]{
+  border-bottom: 2px solid #ddd;
+  width: 80%;
+  padding: 15px 8px;
+}
+
+#section-two .login-modal input[type="email"]{
+  border-bottom: 2px solid #ddd;
+  width: 80%;
+  padding: 15px 8px;
+}
+
+#section-two .login-modal input[type="password"]{
+  border-bottom: 2px solid #ddd;
+  width: 80%;
+  padding: 15px 8px;
+}
+
+#section-two .login-modal a{
+  text-decoration: none;
+  float: right;
+  right: 40px;
+  position: relative;
+  font-size: 0.80em;
+  color: #0A92BF;
+}
+
+#section-two .login-modal .sign-up{
+  margin-top: 35px;
+  width: 80%;
+  padding: 15px 0;
+  border-radius: 30px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0.9;
+  transition: ease-in-out .2s;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 1.3px;
+  background: rgba(59,103,165,1);
+  background: -moz-linear-gradient(45deg, rgba(59,103,165,1) 0%, rgba(56,105,168,1) 5%, rgba(21,117,208,1) 29%, rgba(6,122,224,1) 39%, rgba(6,133,224,1) 62%, rgba(21,166,249,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,103,165,1)), color-stop(5%, rgba(56,105,168,1)), color-stop(29%, rgba(21,117,208,1)), color-stop(39%, rgba(6,122,224,1)), color-stop(62%, rgba(6,133,224,1)), color-stop(100%, rgba(21,166,249,1)));
+  background: -webkit-linear-gradient(45deg, rgba(59,103,165,1) 0%, rgba(56,105,168,1) 5%, rgba(21,117,208,1) 29%, rgba(6,122,224,1) 39%, rgba(6,133,224,1) 62%, rgba(21,166,249,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(59,103,165,1) 0%, rgba(56,105,168,1) 5%, rgba(21,117,208,1) 29%, rgba(6,122,224,1) 39%, rgba(6,133,224,1) 62%, rgba(21,166,249,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(59,103,165,1) 0%, rgba(56,105,168,1) 5%, rgba(21,117,208,1) 29%, rgba(6,122,224,1) 39%, rgba(6,133,224,1) 62%, rgba(21,166,249,1) 100%);
+  background: linear-gradient(45deg, rgba(59,103,165,1) 0%, rgba(56,105,168,1) 5%, rgba(21,117,208,1) 29%, rgba(6,122,224,1) 39%, rgba(6,133,224,1) 62%, rgba(21,166,249,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b67a5', endColorstr='#15a6f9', GradientType=1 );
+}
+
+#section-two .login-modal input[type="submit"]:hover{
+  opacity: 1;
+}
+
+#section-two .login-modal input[type="checkbox"]{
+  margin: 140px 60px;
+}
+
+#section-two .login-modal p{
+  position: relative;
+  top: -156px;
+  left: 50px;
+  margin: 10px 30px;
+  font-size: 0.9em;
+  width: 300px;
+  letter-spacing: 1px;
+  color: #666;
+  line-height: 1.4em;
+}

@@ -1,8 +1,7 @@
-const Laws = require("./Laws");
-const FakeNews = require("./fakenews");
+const RandomFacts = require("./RandomFacts");
 const User = require("./User");
-const Answers = require("./answers")
+const ResultsPage = require("./ResultsPage")
 
 
 
-module.exports = { Laws, FakeNews, User, Answers };
+module.exports = { RandomFacts, User, ResultsPage };

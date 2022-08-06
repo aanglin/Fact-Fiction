@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+
+@media (min-width: 110px) and (max-width: 711px) {
+
+header h1 {
+	font-size: 45px !important;
+}
+
+header p{
+  padding-top: 40px !important;
+  font-size: 10px !important;
+  letter-spacing: 7px !important;
+}
+
+#start{
+	margin-left: 20% !important;
+	margin-right: 30% !important;
+}
+
+#quest{
+	font-size: 20px !important;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+
+#answerT {
+	margin: 10% 0% 0% 15% !important;
+}
+#answerF {
+	margin: 10% 0% 0% 15% !important;  
+}
+  
+#reset {
+  margin: 0% 27% 0% 23% !important;
+}
+}
+
+@media (min-width: 508px) and (max-width: 711px){
+header h1 {
+	font-size: 65px !important;
+}
+
+header p{
+	letter-spacing: 7px !important;
+}
+}
+
+
+
+@media (min-width: 712px) and (max-width: 910px){
+
+#start {
+	margin-left: 40% !important;
+}
+
+#answerT {
+	margin: 5% 0% 0% 30% !important;
+}
+#answerF {
+	margin: 5% 0% 0% 15% !important;  
+}
+#quest{
+	
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+
+}
+
+body {
+	font-family: 'Coda', cursive;
+	font-size: 25px;
+	background-color: rgba(6,133,224,1);
+}
+
+header h1{
+	font-family: 'Bungee Shade', cursive;
+	font-size: 65px;
+	text-align: center;
+}
+
+header p{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 7px;
+	margin-top: -70px;
+	padding-bottom: 60px;
+}
+
+#start {
+	margin-left: 42%;
+	font-size: 40px;
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 5s; /* Safari */
+    transition-duration: 5s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-animation-name: changecolour; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 5.5s; /* Safari 4.0 - 8.0 */
+     -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: changecolour;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    
+}
+
+#start:after {
+    content: "";
+    background: #868679;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes changecolour {
+    0% {color: white;}
+    50% {color: black;}
+    100% {color: white;}
+}
+
+/* Standard syntax */
+@keyframes changecolour {
+   0% {color: white;}
+    50% {color: black;}
+    100% {color: white;}
+}
+
+
+
+#count {
+	text-align: center;
+	font-size: 45px;
+	padding-bottom: 10px;
+}
+
+#points {
+	text-align: center;
+	font-size: 25px;
+	padding-bottom: 10px;
+	padding-top: 40px;
+}
+
+
+#category {
+	text-align: center;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+#quest {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+} 
+
+#answerT {
+	margin: 5% 10% 0% 30%;
+	
+    background-color: #4CAF50;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+#answerF {
+	margin: 5% 20% 0% 15%;
+	
+    background-color: #4CAF50;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+#winner{
+	text-align: center;
+	font-size: 45px;
+	padding-bottom: 10px;
+}
+
+#looser{
+	text-align: center;
+	font-size: 45px;
+	padding-bottom: 10px;
+}
+
+#reset{
+	background-color: #4CAF50;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    position: relative;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+     -webkit-animation-name: changecolour; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
+     -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: changecolour;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+	margin-left: 40%;
+	margin-top:5%;
+    
+}
