@@ -1,17 +1,24 @@
 const router = require('express').Router();
-//   const { Model } = require('sequelize/types');
 const {Laws} = require('../../models');
 
 
-router.get('/', async (req, res) => {
-    const lawData = await Laws.findAll().catch((err) => { 
-        res.json(err);
-      });
-        const law = lawData.map((laws) => Laws.get({ plain: true }));
-        res.render('all', { law });
-      });
-    
-      module.exports = router;    
+// router.get('/law', async (req, res) => {
+//     const lawData = await Laws.findAll().catch((err) => { 
+//         res.json(err);
+//       });
+//         const laws = lawData.map((laws) => Laws.get({ plain: true }));
+//         res.render('all', { laws });
+//       });
+
+// This one is working too!
+// Use http://localhost:3001/laws 
+router.get('/', (req, res) =>{
+    Laws.findAll().then(lawData => {
+      res.json(lawData)
+    })
+});
+
+module.exports = router;    
 
 
 
