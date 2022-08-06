@@ -1,9 +1,8 @@
 const router = require('express').Router();
-const lawRoutes = require('./lawRoutes'); 
-const fakeNewsRoutes = require('./fakeNewsRoutes');
+const randomFactsRoutes = require('./randomFactsRoutes'); 
 
-router.use('/laws', lawRoutes);
-router.use('/fakenews', fakeNewsRoutes);
+
+router.use('/randomFacts', randomFactsRoutes);
 
 module.exports = router;
 

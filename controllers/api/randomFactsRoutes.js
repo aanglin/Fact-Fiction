@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Laws} = require('../../models');
+const { RandomFacts } = require('../../models');
 
 
 // router.get('/law', async (req, res) => {
@@ -11,10 +11,10 @@ const {Laws} = require('../../models');
 //       });
 
 // This one is working too!
-// Use http://localhost:3001/laws 
+// Use http://localhost:3001/RandomFacts
 router.get('/', (req, res) =>{
-    Laws.findAll().then(lawData => {
-      res.json(lawData)
+    RandomFacts.findAll().then(randomData => {
+      res.json(randomData)
     })
 });
 

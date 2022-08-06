@@ -1,9 +1,9 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-class Laws extends Model {}
-
-Laws.init(
+//News Headlines table info
+class RandomFacts extends Model {}
+RandomFacts.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -18,18 +18,16 @@ Laws.init(
     label: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
-      unique: false,
+      unique: false
     },
   },
-   { 
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "laws",
+    modelName: 'randomFacts',
   }
-
-
 );
 
-module.exports = Laws;
+module.exports = RandomFacts;
