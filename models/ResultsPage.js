@@ -13,12 +13,12 @@ ResultsPage.init(
       autoIncrement: true,
     },
     userName: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
+      // references: {
+      //   model: 'user',
+      //   key: 'id',
+      // },
     },
       score: {
         type: DataTypes.INTEGER,
