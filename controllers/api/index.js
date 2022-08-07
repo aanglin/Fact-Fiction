@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const randomFactsRoutes = require('./randomFactsRoutes'); 
-
+const userRoutes = require('./userRoutes');
 
 router.use('/randomFacts', randomFactsRoutes);
+router.use('/users', userRoutes);
 
 module.exports = router;
 
