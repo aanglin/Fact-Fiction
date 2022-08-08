@@ -7,12 +7,12 @@ const loginFormHandler = async (event) => {
 
   if (username && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch('/api/userRoutes', {
+    const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ user_name:username,password: password }),
       headers: { 'Content-Type': 'application/json' },
     });
-
+    
     if (response.ok) {
       // If successful, redirect the browser to the profile page
       document.location.replace('/gamePage');
@@ -21,3 +21,4 @@ const loginFormHandler = async (event) => {
     }
   }
 };
+document.getElementById('login').addEventListener('click', loginFormHandler);
