@@ -1,36 +1,33 @@
-
-
- <div class="side_bar">
-        <div class="title">
-            <div class="logo">Name of Game</div>
-            <label class=" button cancel" for="check"><i class="fas fa-times"></i></label>
-        </div>
-        <ul>
-            <li><a href="#"><i class='bx bx-home-alt'></i>Home</a></li>
-            <li><a href="#"><i class='bx bx-pie-chart-alt-2'></i>Highscore</a></li>
-            <li><a href="#"><i class='bx bx-log-out'></i>Logout</a></li>
-
-        </ul>
-    </div>
-
 <section>
-
-    <div class="container">
-        <div class="card">
-            <div>
-                <h1 class="main-text">This is where the fandomFact will display.
-                </h1>
-            </div>
-            <div class="contentBx">
-                <h2>is this story true or false?</h2>
-                <div class="color"></div>
-                <button>True</button>
-                <button>False</button>
-
-            </div>
-
-        </div>
+  <input type="checkbox" id="check">
+  <label class="button bars" for="check"><i class="fas fa-bars"></i></label>
+  <div class="side_bar">
+    <div class="title">
+      <div class="logo">Name of Game</div>
+      <label class=" button cancel" for="check"><i class="fas fa-times"></i></label>
     </div>
-    <script src="../controllers/index.js"></script>
-    <script src="../public/js/index.js" ></script>
+    <ul>
+      <li><a href="#"><i class='bx bx-home-alt'></i>Home</a></li>
+      <li><a href="#"><i class='bx bx-pie-chart-alt-2'></i>Highscore</a></li>
+      <li><a href="#"><i class='bx bx-log-out'></i>Logout</a></li>
+    </ul>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="card">
+      <div>
+        <h1 class="main-text" id="displayRandomFact">Placeholder text for randomFact
+        </h1>
+      </div>
+      <div class="contentBx">
+        <h2>Can you believe that?</h2>
+        <div class="color"></div>
+        <button id="true-btn">True</button>
+        <button id="false-btn">False</button>
+      </div>
+    </div>
+  </div>
+  <script src="../controllers/index.js"></script>
+  <script src="../public/js/index.js"></script>
 </section>
