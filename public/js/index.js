@@ -1,16 +1,21 @@
-const router = require("express").Router();
-const fetch = require("node-fetch");
+// const router = require("express").Router();
+// const fetch = require("node-fetch");
 // Time for the game
 var timeLeft = 60;
 var title;
 var label;
-var score = 15;
+var score = 0;
 var userName = "Larry";
-
+var displayRandomFactEl = document.getElementById('displayRandomFact');
 var finalResults = { userName, score };
 // Time element on HTML page
 // var timerEl = document.getElementById("timer");
 var timerId;
+
+var startEl = document.getElementById('playGame');
+
+startEl.addEventListener('click', startGame);
+
 
 //function to start game
 function startGame() {
@@ -31,11 +36,8 @@ function startGame() {
 //function to randomly select laws or headlines from DB to display to user, include timer
 
 function getRandomFact() {
-  var userChoseTrue = true;
-  var userChoseFalse = false;
-  var anotherQuestion = setInterval(getRandomFact, 5000);
   // Creating a variable for the web address
-  var randomFactApi = `http://localhost:3001/randomFacts`;
+  var randomFactApi = `/api/randomFacts`;
   // Making a fetch request to grab the data from the web address
   fetch (randomFactApi)
     .then(function (response) {
@@ -46,21 +48,22 @@ function getRandomFact() {
       // console.log(i.title, i.label);
       // This is to get random fact
       var i = data[Math.floor(Math.random() * data.length)];
+      console.log(i.title);
 
-      // Verify user answer
-      if (userChoseTrue === i.label) {
-        score++;
-        anotherQuestion;
-        console.log(score);
-        console.log("Good Job its true!");
-      } else if (userChoseFalse === i.label) {
-        score++;
-        console.log(score);
-        console.log("Good Job its false!!");
-      } else {
-        console.log("WROONNNGG!!!!");
-        console.log(score);
-      }
+      displayRandomFactEl.textContent = i.title;
+
+
+      // // Verify user answer
+      // if (userChoseTrue === i.label) {
+      //   i;
+      // } 
+      // else if (userChoseFalse === i.label) {
+      //   i;
+      // } 
+      // else {
+      //   console.log("WROONNNGG!!!!");
+      //   console.log(score);
+      // }
       // Defining data
       // title = data[i].title
       // label = data[i].label
@@ -88,4 +91,4 @@ function endGame() {
  
 }
 
-endGame();
+// endGame();
