@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "chai",
     "start": "node server.js",
     "seed": "node seeds/seed.js"
   },
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/aanglin/Project-2#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "chai": "^4.3.6",
     "connect-session-sequelize": "^7.1.4",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
