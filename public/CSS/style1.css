@@ -9,25 +9,26 @@
 
 
 body {
-    display: flex;
-    /* justify-content: center;  */
+     justify-content: center; 
+     display: flex;
     align-items: center;
     min-height: 100vh;
     background: #0a0a0b;
 
 }
 
+
 .main-text{
     position: relative;
     text-align: center;
     top: 40px;
-    font-size: 2vh;
+    font-size: 3vh;
+    
 }
 
 .container {
-    position: relative;
-    
-}
+  position: relative;
+} 
 
 .container .card {
     position: relative;
@@ -36,11 +37,13 @@ body {
     background: #232323;
     border-radius: 20px;
     overflow: hidden;
-}
+    padding-left: ;
+} 
 
 .container .card:before {
     content: '';
     position: absolute;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -175,9 +178,9 @@ body {
 } 
 
 .side_bar{
-    position: relative;
-    top: 0;
-    left: -100%;
+    position: absolute; 
+     top: 0; 
+     left: -100%;
     width: 300px;
     height: 100vh;
     background: rgba(59,103,165,1);
