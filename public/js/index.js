@@ -1,23 +1,30 @@
-// const router = require("express").Router();
-// const fetch = require("node-fetch");
 // Time for the game
 var timeLeft = 60;
 var title;
 var label;
+var i;
 var score = 0;
 var userName = "Larry";
-var displayRandomFactEl = document.getElementById('displayRandomFact');
+var displayRandomFactEl = document.getElementById("displayRandomFact");
 var finalResults = { userName, score };
+
 // Time element on HTML page
-// var timerEl = document.getElementById("timer");
+var timerEl = document.getElementById("timer");
 var timerId;
 
-var startEl = document.getElementById('playGame');
+var startEl = document.getElementById("playGame");
+var endEl = document.getElementById("endGame");
+var trueEl = document.getElementById("true-btn");
+var falseEl = document.getElementById("false-btn");
 
-startEl.addEventListener('click', startGame);
-
+startEl.addEventListener("click", startGame);
+endEl.addEventListener("click", endGame);
+trueEl.addEventListener("click", trueBtn);
+falseEl.addEventListener("click", falseBtn);
 
 //function to start game
+//tie to event listener - button click
+// startGame();
 function startGame() {
   timerId = setInterval(function () {
     timeLeft--;
@@ -25,21 +32,23 @@ function startGame() {
     if (timeLeft === 0) {
       clearTimeout(timerId);
     }
-    console.log(timeLeft);
+    timerEl.textContent = timeLeft;
   }, 1000);
   getRandomFact();
 }
 
-//tie to event listener - button click
-// startGame();
-
 //function to randomly select laws or headlines from DB to display to user, include timer
 
 function getRandomFact() {
+  startEl.setAttribute("style", "display:none");
+  endEl.setAttribute("style", "visibility:visible");
+  trueEl.setAttribute("style", "visibility:visible");
+  falseEl.setAttribute("style", "visibility:visible");
+
   // Creating a variable for the web address
   var randomFactApi = `/api/randomFacts`;
   // Making a fetch request to grab the data from the web address
-  fetch (randomFactApi)
+  fetch(randomFactApi)
     .then(function (response) {
       return response.json();
     })
@@ -48,47 +57,57 @@ function getRandomFact() {
       // console.log(i.title, i.label);
       // This is to get random fact
       var i = data[Math.floor(Math.random() * data.length)];
-      console.log(i.title);
-
+      console.log(i.title, i.label);
       displayRandomFactEl.textContent = i.title;
 
-
-      // // Verify user answer
-      // if (userChoseTrue === i.label) {
-      //   i;
-      // } 
-      // else if (userChoseFalse === i.label) {
-      //   i;
-      // } 
-      // else {
-      //   console.log("WROONNNGG!!!!");
-      //   console.log(score);
-      // }
-      // Defining data
-      // title = data[i].title
-      // label = data[i].label
-      // console.log(title)
+      // when the random fact is generated
+      // it is assigned a Boolean value
+      // made by Victor Gutierrez
+      if (i.label === true) {
+        displayRandomFactEl = Boolean(true);
+        console.log(displayRandomFactEl);
+      } else {
+        displayRandomFactEl = Boolean(false);
+        console.log(displayRandomFactEl);
+      }
     });
+}
+
+// Verifies if the random fact is true or false
+function trueBtn() {
+  if(displayRandomFactEl === true){
+    console.log("True is the correct answer");
+  }else{
+    console.log("Incorrect");
+  }
+  
+}
+// Verifies if the tandom fact is false or true 
+function falseBtn() {
+  if(displayRandomFactEl === false){
+    console.log("False is the correct answer");
+  }else{
+    console.log("Incorrect");
+  }
+  
 }
 
 // function to check user choice against boolean (label column). include if statement saying, if user choice equals label then add point to ResultsPage table.
 
-
 // function for when the game ends. Once the game is over the results are stored in the ResultsPage table.
 
 function endGame() {
+  timerEl.setAttribute("style", "display:none");
+  clearTimeout(timerId);
   // URL to the results table
-  var postResults = `http://localhost:3001/results`;
+  // var postResults = `/api/results`;
   // POST request for fetch
-  var options = {
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json'
-    },
-    body: JSON.stringify(finalResults)
-  };
-  fetch(postResults, options);
- 
+  // var options = {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-type': 'application/json'
+  //   },
+  //   body: JSON.stringify(finalResults)
+  // };
+  // fetch(postResults, options);
 }
-
-// endGame();
