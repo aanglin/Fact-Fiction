@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const User = require("../models/User");
 
 // Route to get login html handlebars
-router.get("/login", async (req, res) => {
+router.get("/", async (req, res) => {
   console.log('Login Page')
   res.render("login");
 });
