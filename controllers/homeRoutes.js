@@ -8,6 +8,11 @@ router.get("/login", async (req, res) => {
   res.render("login");
 });
 
+router.get("/gamePage", async (req, res) => {
+  console.log('Game Page')
+  res.render("gamePage");
+});
+
 // router.get("/", (req, res) => {
 router.get("/", async (req, res) => {
   const userData = await User.findAll().catch((err) => {
