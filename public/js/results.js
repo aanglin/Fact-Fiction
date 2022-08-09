@@ -1,3 +1,4 @@
+// const getScore = require('./index.js');
 
 var playAgainEl = document.getElementById("play-again");
 // var finalScoreEl = document.getElementById("final-score");
@@ -21,15 +22,15 @@ function playerScore() {
   var resultsApi = '/api/results';
   fetch(resultsApi)
     .then(function (response) {
-      console.log('response.json:', response.json);
+      // console.log('response.json:', response.json());
       return response.json();
     })
     .then(function (data) {
       console.log('data:', data);
       finalScoreDiv.appendChild(h2El);
-      h2El.textContent = data[24].score;
+      h2El.textContent = data[data.length-1].score;
       h2El.setAttribute("class", "results-page__score")
-      console.log(data[24].score)
+      console.log(data[data.length-1].score)
     })
 }
 
