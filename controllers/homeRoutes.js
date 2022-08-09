@@ -9,7 +9,7 @@ router.get("/",  async (req, res) => {
   res.render("login");
 });
 
-router.get("/gamePage", withAuth, async (req, res) => {
+router.get("/gamePage", async (req, res) => {
   console.log('Game Page')
   res.render("gamePage");
 });
@@ -23,7 +23,7 @@ router.get("/", withAuth, async (req, res) => {
   res.render("all", users);
 });
 
-router.get("/signup",withAuth, (req, res) => {
+router.get("/signup", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
     return;
@@ -32,7 +32,7 @@ router.get("/signup",withAuth, (req, res) => {
   res.render("signup");
 });
 
-router.post("/login", withAuth,async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
     // we search the DB for a user with the provided email
     const userData = await User.findOne({
@@ -60,7 +60,7 @@ router.post("/login", withAuth,async (req, res) => {
   }
 });
 
-router.get("/:id", withAuth, async (req, res) => {
+router.get("/:id",  async (req, res) => {
   try {
     const userData = await User.findByPk(req.params.id);
     if (!userData) {
