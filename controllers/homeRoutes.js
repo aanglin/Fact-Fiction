@@ -16,8 +16,8 @@ router.get("/gamePage", withAuth, async (req, res) => {
 });
 
 //route for results page - gameOver
-router.get("/resultsPage", withAuth, async (req, res) => {
-  console.log('ResultsPage')
+router.get("/results", withAuth, async (req, res) => {
+  console.log('Results Page')
   res.render("resultsPage");
 });
 
