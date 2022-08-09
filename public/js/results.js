@@ -25,9 +25,9 @@ function playerScore() {
     })
     .then(function (data) {
       finalScoreDiv.appendChild(h2El);
-      h2El.textContent = data[24].score;
+      h2El.textContent = data[0].score;
       h2El.setAttribute("class", "results-page__score")
-      console.log(data[24].score)
+      console.log(data[0].score)
     })
 }
 

@@ -41,7 +41,7 @@ router.get("/", async (req, res) => {
 router.get("/signup", (req, res) => {
   if (req.session) {
     console.log(req.session)
-  res.redirect("/gamepage");
+  res.redirect("/gamePage");
   }
   res.render("login");
 });
