@@ -10,19 +10,19 @@ router.get("/",  async (req, res) => {
 });
 
 //route to game page
-router.get("/gamePage", withAuth, async (req, res) => {
+router.get("/gamePage", async (req, res) => {
   console.log('Game Page')
   res.render("gamePage");
 });
 
 //route for results page - gameOver
-router.get("/results", withAuth, async (req, res) => {
+router.get("/results", async (req, res) => {
   console.log('Results Page')
   res.render("resultsPage");
 });
 
 // router.get("/", (req, res) => {
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   const userData = await User.findAll().catch((err) => {
     res.json(err);
   });
