@@ -13,6 +13,7 @@ var h1El = document.createElement("h1");
 var timerEl = document.getElementById("timer");
 var timerId;
 
+//buttons
 var startEl = document.getElementById("playGame");
 var endEl = document.getElementById("endGame");
 var trueEl = document.getElementById("true-btn");
@@ -139,5 +140,5 @@ function endGame() {
 
 //redirect user to results page
 function results() {
-  location.replace('/results')
+  window.location.replace('/results')
 }
