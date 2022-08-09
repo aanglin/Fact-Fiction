@@ -8,16 +8,17 @@ body{
 
 input, button{
   border: none;
+  
 }
 
 button{
   cursor: pointer;
   transition: ease-in-out 0.3s;
 }
-
+/*
 button:hover{
   transform: scale(1.2);
-}
+}*/
 
 *:focus{
   outline: none;
@@ -87,13 +88,13 @@ button:hover{
 }
 
 #section-one .login-modal input[type="submit"]{
-  margin-top: 80px;
+  margin-top: 60px;
   width: 80%;
   padding: 15px 0;
   border-radius: 30px;
   text-transform: uppercase;
   color: #fff;
-  font-weight: 400;
+  font-weight: 600;
   opacity: 0.9;
   transition: ease-in-out .2s;
   cursor: pointer;
@@ -147,8 +148,8 @@ button:hover{
 
 #section-one .login-modal .login-modal-footer a{
   position: relative;
-  top: 112px;
-  right: 155px;
+  top: 25px;
+  right: 375px;
   font-size: 1em;
 }
 
@@ -163,7 +164,7 @@ button:hover{
 #section-two .login-modal{
   background-color: #F2F2F2;
   width: 450px;
-  height: 700px;
+  height: 620px;
   margin: 60px 30px;
   -webkit-box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.75);
@@ -197,18 +198,21 @@ button:hover{
   border-bottom: 2px solid #ddd;
   width: 80%;
   padding: 15px 8px;
+  transition: ease-in-out .4s;
 }
 
 #section-two .login-modal input[type="email"]{
   border-bottom: 2px solid #ddd;
   width: 80%;
   padding: 15px 8px;
+ 
 }
 
 #section-two .login-modal input[type="password"]{
   border-bottom: 2px solid #ddd;
   width: 80%;
   padding: 15px 8px;
+  transition: ease-in-out .4s;
 }
 
 #section-two .login-modal a{
@@ -221,7 +225,7 @@ button:hover{
 }
 
 #section-two .login-modal .sign-up{
-  margin-top: 35px;
+  margin-top: 40px;
   margin-left: 40px;
   width: 80%;
   padding: 15px 0;
@@ -230,6 +234,7 @@ button:hover{
   color: #fff;
   font-weight: 600;
   opacity: 0.9;
+  
   text-align: center;
   cursor: pointer;
   letter-spacing: 1.3px;
@@ -243,7 +248,7 @@ button:hover{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b67a5', endColorstr='#15a6f9', GradientType=1 );
 }
 
-#section-two .login-modal input[type="submit"]:hover{
+#section-two .login-modal input[type="submit"]{
   opacity: 1;
 }
 
@@ -262,7 +267,7 @@ button:hover{
   color: #666;
   line-height: 1.4em;
 }
-
+/*result page*/
 .results-page {
   margin-left: 40%;
   margin-top: 10%;
