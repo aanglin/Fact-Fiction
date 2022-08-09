@@ -9,9 +9,16 @@ router.get("/",  async (req, res) => {
   res.render("login");
 });
 
+//route to game page
 router.get("/gamePage", async (req, res) => {
   console.log('Game Page')
   res.render("gamePage");
+});
+
+//route for results page - gameOver
+router.get("/resultsPage", async (req, res) => {
+  console.log('ResultsPage')
+  res.render("resultsPage");
 });
 
 // router.get("/", (req, res) => {
