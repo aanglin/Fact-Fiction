@@ -5,7 +5,9 @@ var label;
 var i;
 var score = 0;
 var userName = "Larry";
-var displayRandomFactEl = document.getElementById("displayRandomFact");
+var div = document.body.children[1].children[1].children[0].children[0];
+var h1El = document.createElement("h1");
+// console.log(div);
 var finalResults = { userName, score };
 
 // Time element on HTML page
@@ -58,7 +60,13 @@ function getRandomFact() {
       // This is to get random fact
       var i = data[Math.floor(Math.random() * data.length)];
       console.log(i.title, i.label);
-      displayRandomFactEl.textContent = i.title;
+      // displayRandomFactEl.textContent = i.title;
+
+      // Adds attributes to h1El then appends to specified div
+      h1El.setAttribute("class", "main-text");
+      h1El.setAttribute("id", "displayRandomFact");
+      div.appendChild(h1El);
+      h1El.textContent = i.title;
 
       // when the random fact is generated
       // it is assigned a Boolean value
@@ -80,6 +88,8 @@ function trueBtn() {
   }else{
     console.log("Incorrect");
   }
+  // Removes the appended h1El
+  h1El.remove();
   getRandomFact();
 }
 // Verifies if the tandom fact is false or true 
@@ -89,6 +99,8 @@ function falseBtn() {
   }else{
     console.log("Incorrect");
   }
+  // Removes the appended h1El
+  h1El.remove();
   getRandomFact();
 }
 
