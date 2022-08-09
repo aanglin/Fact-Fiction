@@ -10,6 +10,7 @@ router.get("/",  async (req, res) => {
 });
 
 //route to game page
+//include find by id
 router.get("/gamePage", withAuth,async (req, res) => {
   console.log('Game Page')
   res.render("gamePage");
