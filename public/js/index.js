@@ -1,5 +1,5 @@
 // Time for the game
-var timeLeft = 61;
+var timeLeft = 11;
 var title;
 var label;
 var i;
@@ -133,7 +133,11 @@ function endGame() {
     body: JSON.stringify(finalResults)
   };
   fetch(postResults, options);
-    // location.reload();
     console.log(finalResults);
+    results();
 }
 
+//redirect user to results page
+function results() {
+  location.replace('/results')
+}
