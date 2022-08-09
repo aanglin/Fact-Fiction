@@ -8,7 +8,6 @@ var userName = "Larry";
 var div = document.body.children[1].children[1].children[0].children[0];
 var h1El = document.createElement("h1");
 // console.log(div);
-var finalResults = { userName, score };
 
 // Time element on HTML page
 var timerEl = document.getElementById("timer");
@@ -85,7 +84,7 @@ function getRandomFact() {
 //add 50pts if correct
 function trueBtn() {
   if(displayRandomFactEl === true){
-    score += 50;
+    score++;
     console.log(score);
     console.log("True is the correct answer");
   }else{
@@ -99,7 +98,7 @@ function trueBtn() {
 //add 50pts if correct
 function falseBtn() {
   if(displayRandomFactEl === false){
-    score += 50;
+    score++;
     console.log(score);
     console.log("False is the correct answer");
   }else{
@@ -113,6 +112,7 @@ function falseBtn() {
 // function to check user choice against boolean (label column). include if statement saying, if user choice equals label then add point to ResultsPage table.
 
 // function for when the game ends. Once the game is over the results are stored in the ResultsPage table.
+var finalResults = { userName, score };
 
 function endGame() {
   timerEl.setAttribute("style", "display:none");
@@ -129,5 +129,6 @@ function endGame() {
     body: JSON.stringify(finalResults)
   };
   fetch(postResults, options);
-  
 }
+
+console.log(finalResults);
