@@ -82,8 +82,11 @@ function getRandomFact() {
 }
 
 // Verifies if the random fact is true or false
+//add 50pts if correct
 function trueBtn() {
   if(displayRandomFactEl === true){
+    score += 50;
+    console.log(score);
     console.log("True is the correct answer");
   }else{
     console.log("Incorrect");
@@ -93,8 +96,11 @@ function trueBtn() {
   getRandomFact();
 }
 // Verifies if the tandom fact is false or true 
+//add 50pts if correct
 function falseBtn() {
   if(displayRandomFactEl === false){
+    score += 50;
+    console.log(score);
     console.log("False is the correct answer");
   }else{
     console.log("Incorrect");
