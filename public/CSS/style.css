@@ -222,6 +222,7 @@ button:hover{
 
 #section-two .login-modal .sign-up{
   margin-top: 35px;
+  margin-left: 40px;
   width: 80%;
   padding: 15px 0;
   border-radius: 30px;
@@ -229,7 +230,6 @@ button:hover{
   color: #fff;
   font-weight: 600;
   opacity: 0.9;
-  transition: ease-in-out .2s;
   text-align: center;
   cursor: pointer;
   letter-spacing: 1.3px;
@@ -262,3 +262,25 @@ button:hover{
   color: #666;
   line-height: 1.4em;
 }
+
+.results-page {
+  margin-left: 40%;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 480px;
+
+}
+.results-page__info {
+  font-size: 3rem;
+}
+
+.results-page__score {
+  font-size: 10rem;
+  margin-top: 0rem;
+  margin-bottom: 5rem;
+}
+
+
+
