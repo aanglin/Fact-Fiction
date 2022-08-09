@@ -21,8 +21,9 @@ router.get("/results", async (req, res) => {
   res.render("resultsPage");
 });
 
-// router.get("/", (req, res) => {
+
 router.get("/", async (req, res) => {
+
   const userData = await User.findAll().catch((err) => {
     res.json(err);
   });
@@ -31,13 +32,13 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/signup", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
+  if (req.session) {
+    console.log(req.session)
+  res.redirect("/gamepage");
   }
-
-  res.render("signup");
+  res.render("login");
 });
+  
 
 router.post("/login", async (req, res) => {
   try {
@@ -66,6 +67,9 @@ router.post("/login", async (req, res) => {
     res.status(500).json(err);
   }
 });
+  
+
+
 
 router.get("/:id",  async (req, res) => {
   try {
@@ -82,3 +86,6 @@ router.get("/:id",  async (req, res) => {
 });
 
 module.exports = router;
+
+
+
