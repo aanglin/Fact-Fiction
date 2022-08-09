@@ -119,14 +119,15 @@ function endGame() {
   clearTimeout(timerId);
   location.reload();
   // URL to the results table
-  // var postResults = `/api/results`;
+  var postResults = `/api/results`;
   // POST request for fetch
-  // var options = {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-type': 'application/json'
-  //   },
-  //   body: JSON.stringify(finalResults)
-  // };
-  // fetch(postResults, options);
+  var options = {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify(finalResults)
+  };
+  fetch(postResults, options);
+  
 }
