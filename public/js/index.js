@@ -84,7 +84,7 @@ function getRandomFact() {
 //add 50pts if correct
 function trueBtn() {
   if(displayRandomFactEl === true){
-    score++;
+    score += 50;
     console.log(score);
     console.log("True is the correct answer");
   }else{
@@ -98,7 +98,7 @@ function trueBtn() {
 //add 50pts if correct
 function falseBtn() {
   if(displayRandomFactEl === false){
-    score++;
+    score += 50;
     console.log(score);
     console.log("False is the correct answer");
   }else{
