@@ -1,5 +1,5 @@
 // Time for the game
-var timeLeft = 11;
+var timeLeft = 61;
 var title;
 var label;
 var i;
