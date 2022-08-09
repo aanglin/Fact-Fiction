@@ -1,5 +1,5 @@
 // Time for the game
-var timeLeft = 60;
+var timeLeft = 11;
 var title;
 var label;
 var i;
@@ -8,12 +8,12 @@ var userName = "Larry";
 var div = document.body.children[1].children[1].children[0].children[0];
 var h1El = document.createElement("h1");
 // console.log(div);
-var finalResults = { userName, score };
 
 // Time element on HTML page
 var timerEl = document.getElementById("timer");
 var timerId;
 
+//buttons
 var startEl = document.getElementById("playGame");
 var endEl = document.getElementById("endGame");
 var trueEl = document.getElementById("true-btn");
@@ -33,6 +33,8 @@ function startGame() {
     // timerEl.textContent = timeLeft;
     if (timeLeft === 0) {
       clearTimeout(timerId);
+      console.log('Final score', score)
+      endGame();
     }
     timerEl.textContent = timeLeft;
   }, 1000);
@@ -114,10 +116,13 @@ function falseBtn() {
 
 // function for when the game ends. Once the game is over the results are stored in the ResultsPage table.
 
+
 function endGame() {
+  console.log('Final score in endGame Function', score);
   timerEl.setAttribute("style", "display:none");
   clearTimeout(timerId);
-  location.reload();
+  var finalResults = { userName, score };
+  
   // URL to the results table
   var postResults = `/api/results`;
   // POST request for fetch
@@ -129,5 +134,11 @@ function endGame() {
     body: JSON.stringify(finalResults)
   };
   fetch(postResults, options);
-  
+    console.log(finalResults);
+    results();
+}
+
+//redirect user to results page
+function results() {
+  window.location.replace('/results')
 }

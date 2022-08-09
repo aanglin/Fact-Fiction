@@ -8,7 +8,7 @@
     </div>
     <ul>
       {{!-- <li><a href="/"><i class='bx bx-home-alt'></i>Home</a></li> --}}
-      <li><a href="#"><i class='bx bx-game'></i>Game</a></li>
+      <li><a href="/gamePage"><i class='bx bx-game'></i>Game</a></li>
       <li><a href="#"><i class='bx bx-pie-chart-alt-2'></i>Highscore</a></li>
       <li id="logout"><a><i class='bx bx-log-out'></i>Logout</a></li>
     </ul>
@@ -21,12 +21,13 @@
     <div class="containerpage">
         <h3 class="results-page__info">Your final score :</h3>
         <h2 class="results-page__score">100%</h2>
-        <button class="results-page__retake-btn btn">Take it again</button>
-        <a class="results-page__btn-link btn" href="" target="_blank">Fake or Not time!</a>
+        <button id="play-again" class="results-page__retake-btn btn">Play Again</button>
+        {{!-- <a class="results-page__btn-link btn" href="" target="_blank">Fake or Not time!</a> --}}
     </div>
 
 <section>
   
   <script src="/js/index.js"></script>
+  <script src="/js/results.js"
   <script src="/js/logout.js"></script>
 </section>
