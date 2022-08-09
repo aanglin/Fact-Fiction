@@ -21,9 +21,11 @@ function playerScore() {
   var resultsApi = '/api/results';
   fetch(resultsApi)
     .then(function (response) {
+      console.log('response.json:', response.json);
       return response.json();
     })
     .then(function (data) {
+      console.log('data:', data);
       finalScoreDiv.appendChild(h2El);
       h2El.textContent = data[24].score;
       h2El.setAttribute("class", "results-page__score")
