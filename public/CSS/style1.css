@@ -17,7 +17,7 @@ body {
 
 }
 
-
+/* thsi is the css for the game card */
 .main-text{
     position: relative;
     text-align: center;
@@ -175,7 +175,7 @@ body {
     transform: translateY(0px);
     transition-delay: 0.9s;
 } 
-
+/*  this is the css for the side bar*/
 .side_bar{
     position: absolute; 
      top: 0; 
