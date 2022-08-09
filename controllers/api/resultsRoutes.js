@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { ResultsPage } = require("../../models/");
+const withAuth = require("../../utils/auth");
 
-router.post("/", (req, res) => {
+router.post("/", withAuth,(req, res) => {
     ResultsPage.create({
         userName: req.body.userName,
         score: req.body.score
@@ -14,7 +15,7 @@ router.post("/", (req, res) => {
     })
 })
 
-router.get("/", (req, res) => {
+router.get("/", withAuth, (req, res) => {
     ResultsPage.findAll().then(data => {
         res.json(data)
     });
