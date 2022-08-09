@@ -21,6 +21,13 @@ router.get("/results", async (req, res) => {
   res.render("resultsPage");
 });
 
+//route for high scores page - gameOver
+router.get("/highscores", async (req, res) => {
+  console.log('Highscores Page')
+  res.render("highscores");
+});
+
+// router.get("/", (req, res) => {
 
 router.get("/", async (req, res) => {
 
