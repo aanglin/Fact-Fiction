@@ -65,12 +65,12 @@ function getRandomFact() {
       // made by Victor Gutierrez
       if (i.label === true) {
         displayRandomFactEl = Boolean(true);
-        console.log(displayRandomFactEl);
+        // console.log(displayRandomFactEl);
       } else {
         displayRandomFactEl = Boolean(false);
-        console.log(displayRandomFactEl);
+        // console.log(displayRandomFactEl);
       }
-    });
+    });   
 }
 
 // Verifies if the random fact is true or false
@@ -80,7 +80,7 @@ function trueBtn() {
   }else{
     console.log("Incorrect");
   }
-  
+  getRandomFact();
 }
 // Verifies if the tandom fact is false or true 
 function falseBtn() {
@@ -89,7 +89,7 @@ function falseBtn() {
   }else{
     console.log("Incorrect");
   }
-  
+  getRandomFact();
 }
 
 // function to check user choice against boolean (label column). include if statement saying, if user choice equals label then add point to ResultsPage table.
@@ -99,6 +99,7 @@ function falseBtn() {
 function endGame() {
   timerEl.setAttribute("style", "display:none");
   clearTimeout(timerId);
+  location.reload();
   // URL to the results table
   // var postResults = `/api/results`;
   // POST request for fetch
