@@ -1,5 +1,5 @@
 // Time for the game
-var timeLeft = 60;
+var timeLeft = 61;
 var title;
 var label;
 var i;
@@ -32,6 +32,8 @@ function startGame() {
     // timerEl.textContent = timeLeft;
     if (timeLeft === 0) {
       clearTimeout(timerId);
+      console.log('Final score', score)
+      endGame();
     }
     timerEl.textContent = timeLeft;
   }, 1000);
@@ -112,12 +114,14 @@ function falseBtn() {
 // function to check user choice against boolean (label column). include if statement saying, if user choice equals label then add point to ResultsPage table.
 
 // function for when the game ends. Once the game is over the results are stored in the ResultsPage table.
-var finalResults = { userName, score };
+
 
 function endGame() {
+  console.log('Final score in endGame Function', score);
   timerEl.setAttribute("style", "display:none");
   clearTimeout(timerId);
-  location.reload();
+  var finalResults = { userName, score };
+  
   // URL to the results table
   var postResults = `/api/results`;
   // POST request for fetch
@@ -129,6 +133,7 @@ function endGame() {
     body: JSON.stringify(finalResults)
   };
   fetch(postResults, options);
+    // location.reload();
+    console.log(finalResults);
 }
 
-console.log(finalResults);
