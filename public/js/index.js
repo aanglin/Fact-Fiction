@@ -84,7 +84,8 @@ function getRandomFact() {
 // Verifies if the random fact is true or false
 function trueBtn() {
   if(displayRandomFactEl === true){
-    console.log("True is the correct answer");
+    score++;
+    console.log(score);
   }else{
     console.log("Incorrect");
   }
@@ -95,7 +96,8 @@ function trueBtn() {
 // Verifies if the tandom fact is false or true 
 function falseBtn() {
   if(displayRandomFactEl === false){
-    console.log("False is the correct answer");
+    score++;
+    console.log(score);
   }else{
     console.log("Incorrect");
   }
@@ -113,14 +115,15 @@ function endGame() {
   clearTimeout(timerId);
   location.reload();
   // URL to the results table
-  // var postResults = `/api/results`;
+  var postResults = `/api/results`;
   // POST request for fetch
-  // var options = {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-type': 'application/json'
-  //   },
-  //   body: JSON.stringify(finalResults)
-  // };
-  // fetch(postResults, options);
+  var options = {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify(finalResults)
+  };
+  fetch(postResults, options);
+  
 }
