@@ -10,4 +10,4 @@ const ResultsPage = require("./ResultsPage")
 //   foreignKey: 'id',
 // });
 
-module.exports = { RandomFacts, User, ResultsPage };
+// module.exports = { RandomFacts, User, ResultsPage };
