@@ -58,9 +58,9 @@ body {
 }
 
 .container .card:after { 
-    content: 'group2';
+    content: 'Fact or Fiction';
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 10%;
     font-size: 6em;
     font-weight: 1000;
