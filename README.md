@@ -59,6 +59,7 @@ As a developer wanting to test functionality and authorization of login credenti
 - [Bootstrap](https://getbootstrap.com/)<br>
 - [Kaggle](https://www.kaggle.com/)
 
+
 ## Contributing
 [Aaron Anglin](https://github.com/aanglin)<br>
 [Sara Baqla](https://github.com/missatrox44) <br>
