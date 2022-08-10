@@ -11,9 +11,12 @@ body{
   color: whitesmoke;
 }
 
-#fiction {
+
+
+
+#fiction{
   font-size: 100px;
-/* float: right !important; */
+
 }
 
 input, button{
@@ -409,7 +412,8 @@ a {
   
 }
 
-.button3 a{
+.button3{
+  margin-left: -45px;
   color:white;
   font-family:Helvetica, sans-serif;
   font-weight:bold;
@@ -434,7 +438,7 @@ a {
   border-radius: 5px;
 }
 
-.button3 a:active{
+.button3:active{
   top:10px;
   background-color:#F78900;
   
@@ -443,7 +447,7 @@ a {
   box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
 }
 
-.button3:after{
+/* .button3:after{
   content:"";
   height:100px;
   width:50px;
@@ -456,7 +460,7 @@ a {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-}
+} */
 
 .listo{
   margin-left: 40px;
