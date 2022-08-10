@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { RandomFacts } = require('../../models');
+const { RandomFacts } = require('../../');
 
 
 // router.get('/law', async (req, res) => {
