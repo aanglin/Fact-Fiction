@@ -35,23 +35,22 @@ This full-stack JavaScript program can be enjoyed by anyone who would like to te
 Note: Bootstrap was used for styling and Kaggle was used to get fake new headlines.
 <br><br>
 To access the game, the user will first be directed to the homepage where a user can sign in if they have an existing login.
-![Homepage Screenshot](linkToScreenShot)
+![Homepage Screenshot](./assets/step-1.png)
 <br><br>
 If users do not have a current account, they can click 'Sign Up' and will be asked to enter new account information.
-![Homepage Screenshot](linkToScreenShot)
+![Homepage Screenshot](./assets/step-2.png)
 <br><br>
 Once logged in, the user will be directed to the game page. The navigation menu to the left offers options for the user to logout, view high scores or play the game. To start the game, the user will click 'Play Game' button located on the game card.
-![GamePage Screenshot](linkToScreenShot)
+![GamePage Screenshot](./assets/step-3.png)
 <br><br>
 Once the game starts, the user will have 60 seconds to answer as many prompts correctly as possible. Each correct answer will add 50 points to the final score
-![Gameplay Screenshot](linkToScreenShot)
+![Gameplay Screenshot](./assets/step-4.png)
 <br><br>
 The game will end once the timer runs out or if the user clicks the 'End Game' button. 
-![Point to timer/endgame button Screenshot](linkToScreenShot)
+![Point to timer/endgame button Screenshot](./assets/step-5.png)
 <br><br>
 Once the game is over, the final score will be presented to the user and they will be given the option to play the game again, view high scores, or logout.
-![Game Over Screenshot](linkToScreenShot)
-![High Scores page](linkToScreenShot)
+![Game Over Screenshot](./assets/step-6.png)
 <br><br>
 As a developer wanting to test functionality and authorization of login credentials, the Nightmare package can be utilized. Simply start your server, enter credentials you would like to test and type 'node test.js'. <br>
 ![Nightmare Demo](./assets/nightmaredemo.gif)
