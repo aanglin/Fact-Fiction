@@ -5,7 +5,7 @@ var label;
 var i;
 var score = 0;
 var userName = "Larry";
-var div = document.body.children[1].children[1].children[0].children[0];
+// var div = document.body.children[1].children[1].children[0].children[0];
 var h1El = document.createElement("h1");
 // console.log(div);
 
