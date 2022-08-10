@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "chai",
-    "start": "node server.js",
+    "start": "node server.js & node seeds/seed.js",
     "seed": "node seeds/seed.js"
   },
   "repository": {
