@@ -66,7 +66,7 @@ As a developer wanting to test functionality and authorization of login credenti
 <<<<<<< HEAD
 ## Resources
 - [Youtube](https://www.youtube.com/watch?v=jUByQLfakJ8)<br>
-- [Codepen](https://www.kaggle.com/)
+- [W3 svg help](https://www.w3schools.com/graphics/svg_intro.asp)
 
 
 =======
