@@ -1,6 +1,6 @@
 const RandomFacts = require("./RandomFacts");
 const User = require("./User");
-// const ResultsPage = require("./ResultsPage")
+const ResultsPage = require("./ResultsPage")
 
 // User.hasMany(ResultsPage, {
 //   foreignKey: 'id'
@@ -10,4 +10,4 @@ const User = require("./User");
 //   foreignKey: 'id',
 // });
 
-module.exports = { RandomFacts, User};
+module.exports = { RandomFacts, User, ResultsPage };
