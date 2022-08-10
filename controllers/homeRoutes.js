@@ -4,20 +4,20 @@ const User = require("../models/User");
 const withAuth = require("../utils/auth")
 
 // Route to get login html handlebars
-router.get("/", async (req, res) => {
+router.get("/",  async (req, res) => {
   console.log('Login Page')
   res.render("login");
 });
 
 //route to game page
 //include find by id
-router.get("/gamePage", async (req, res) => {
+router.get("/gamePage", withAuth,async (req, res) => {
   console.log('Game Page')
   res.render("gamePage");
 });
 
 //route for results page - gameOver
-router.get("/results", async (req, res) => {
+router.get("/results", withAuth, async (req, res) => {
   console.log('Results Page')
   res.render("resultsPage");
 });
@@ -42,7 +42,7 @@ router.get("/", async (req, res) => {
 router.get("/signup", (req, res) => {
   if (req.session) {
     console.log(req.session)
-  res.redirect("/gamepage");
+  res.redirect("/gamePage");
   }
   res.render("login");
 });

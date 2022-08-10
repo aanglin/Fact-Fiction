@@ -26,7 +26,6 @@ function playerScore() {
       return response.json();
     })
     .then(function (data) {
-      console.log('data:', data);
       finalScoreDiv.appendChild(h2El);
       h2El.textContent = data[data.length-1].score;
       h2El.setAttribute("class", "results-page__score")

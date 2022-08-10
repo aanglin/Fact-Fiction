@@ -21,7 +21,6 @@
   "homepage": "https://github.com/aanglin/Project-2#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "chai": "^4.3.6",
     "connect-session-sequelize": "^7.1.4",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
@@ -32,8 +31,6 @@
     "nightmare": "^3.0.2",
     "node-fetch": "^1.7.3",
     "nodemon": "^2.0.19",
-    "passport": "^0.6.0",
-    "passport-local": "^1.0.0",
     "sequelize": "^6.21.3"
   }
 }
