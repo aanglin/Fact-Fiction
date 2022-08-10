@@ -4,25 +4,34 @@ const User = require("../models/User");
 const withAuth = require("../utils/auth")
 
 // Route to get login html handlebars
-router.get("/",  async (req, res) => {
+router.get("/", async (req, res) => {
   console.log('Login Page')
   res.render("login");
 });
 
 //route to game page
-router.get("/gamePage", withAuth, async (req, res) => {
+//include find by id
+router.get("/gamePage", async (req, res) => {
   console.log('Game Page')
   res.render("gamePage");
 });
 
 //route for results page - gameOver
-router.get("/resultsPage", withAuth, async (req, res) => {
-  console.log('ResultsPage')
+router.get("/results", async (req, res) => {
+  console.log('Results Page')
   res.render("resultsPage");
 });
 
+//route for high scores page - gameOver
+router.get("/highscores", async (req, res) => {
+  console.log('Highscores Page')
+  res.render("highscores");
+});
+
 // router.get("/", (req, res) => {
-router.get("/", withAuth, async (req, res) => {
+
+router.get("/", async (req, res) => {
+
   const userData = await User.findAll().catch((err) => {
     res.json(err);
   });
@@ -31,13 +40,13 @@ router.get("/", withAuth, async (req, res) => {
 });
 
 router.get("/signup", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
+  if (req.session) {
+    console.log(req.session)
+  res.redirect("/gamepage");
   }
-
-  res.render("signup");
+  res.render("login");
 });
+  
 
 router.post("/login", async (req, res) => {
   try {
@@ -66,6 +75,9 @@ router.post("/login", async (req, res) => {
     res.status(500).json(err);
   }
 });
+  
+
+
 
 router.get("/:id",  async (req, res) => {
   try {
@@ -82,3 +94,6 @@ router.get("/:id",  async (req, res) => {
 });
 
 module.exports = router;
+
+
+

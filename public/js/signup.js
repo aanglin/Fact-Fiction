@@ -4,7 +4,9 @@ const signupFormHandler = async (event) => {
   const username = document.querySelector('#username-input-signup').value.trim();
   const password = document.querySelector('#password-input-signup').value.trim();
 
+
   if (username && password) {
+    console.log('please work')
     const response = await fetch('/api/users/', {
       method: 'POST',
       body: JSON.stringify({ userName:username, password:password }),
@@ -12,7 +14,8 @@ const signupFormHandler = async (event) => {
     });
 console.log(response);
     if (response.ok) {
-      document.location.replace('/gamepage');
+      console.log('test')
+      document.location.replace('/gamePage');
     } else {
       alert(response.statusText);
     }
