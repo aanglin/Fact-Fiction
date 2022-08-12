@@ -2,7 +2,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Deployed Website
-[Deployed Website](herokuLinkWillGoHere)
+[Deployed Website](https://factorfiction.herokuapp.com/) <br>
+Initial Deployment Date: August 10, 2022
 
 ## Description
 Fact or fiction is a full-stack application that allows users to play an interactive game, determining whether or not presented laws or headlines are real or fake.
@@ -64,11 +65,16 @@ As a developer wanting to test functionality and authorization of login credenti
 
 
 ## Contributing
-[Aaron Anglin](https://github.com/aanglin)<br>
-[Sara Baqla](https://github.com/missatrox44) <br>
-[Matthew Castoreno](https://github.com/Castoreno05)<br>
-[Victor Guiterrez](https://github.com/VictorGutierrez25)<br>
-[Angel Meza](https://github.com/amezabla)
+<!-- Table code borrowed from Andrew Edwards https://github.com/andrew87e-->
+<table>
+  <tr>
+<td align="center"><a href="https://github.com/aanglin"><img src="https://avatars.githubusercontent.com/u/101485583?v=4" width="100px;" alt=""/><br /><sub><b>Aaron Anglin</b></sub></a></td>
+<td align="center"><a href="https://github.com/missatrox44"><img src="https://avatars.githubusercontent.com/u/74509058?v=4" width="100px;" alt=""/><br /><sub><b>Sara Baqla</b></sub></a></td>
+<td align="center"><a href="https://github.com/Castoreno05"><img src="https://avatars.githubusercontent.com/u/105801681?v=4" width="100px;" alt=""/><br /><sub><b>Matthew Castoreno</b></sub></a></td>
+<td align="center"><a href="https://github.com/VictorGutierrez25"><img src="https://avatars.githubusercontent.com/u/106755028?v=4" width="100px;" alt=""/><br /><sub><b>Victor Guiterrez</b></sub></a></td>
+<td align="center"><a href="https://github.com/amezabla"><img src="https://avatars.githubusercontent.com/u/103525784?v=4" width="100px;" alt=""/><br /><sub><b>Angel Meza</b></sub></a></td>
+ </tr>
+</table>
 
 ## Questions
 Feel free to contact any contributing developer with suggestions for improvements, questions or concerns.
